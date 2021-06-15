@@ -1,0 +1,35 @@
+﻿@model BiuroKomunikacja.Areas.Identity.ApplicationUser
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <h1>Dashboard</h1>
+    <hr />
+    <dl class="row
+    <dt class="col-4">
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+    <h5 class="card-title">Rachunki</h5>
+    <a href="/UserData" class="btn btn-primary">Przejdź do rachunków</a>
+    </div>
+    </div>
+    </dt>
+    <dt class="col-4">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title">Wiadomości</h5>
+            <a href="/Message" class="btn btn-primary">Przejdź do wiadomości</a>
+            </div>
+        </div>
+    </dt>
+    <dt class="col-4">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Obsługuje cię</h5>
+                @Html.DisplayFor(model => model.RelatedUser.UserName)
+            </div>
+        </div>
+    </dt>
+    </dl>
+</div>

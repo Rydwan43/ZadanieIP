@@ -1,0 +1,41 @@
+@model BiuroKomunikacja.Models.MessageModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>MessageModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Nadawca
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.sender.UserName)
+        </dd>
+        <dt class="col-sm-2">
+            Odbiorca
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.reciver.UserName)
+        </dd>
+        <dt class="col-sm-2">
+            Data
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MessageDate)
+        </dd>
+        <dt class="col-sm-2">
+            Wiadomość
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Message)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Powrót</a>
+</div>

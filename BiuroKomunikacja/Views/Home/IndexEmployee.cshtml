@@ -1,0 +1,38 @@
+﻿@model IEnumerable<BiuroKomunikacja.Areas.Identity.ApplicationUser>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <h1>Dashboard</h1>
+    <hr />
+    <dl class="row
+    <dt class="col-4">
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+    <h5 class="card-title">Rachunki</h5>
+    <a href="/UserData" class="btn btn-primary">Przejdź do rachunków</a>
+    </div>
+    </div>
+    </dt>
+    <dt class="col-4">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title">Wiadomości</h5>
+            <a href="/Message" class="btn btn-primary">Przejdź do wiadomości</a>
+            </div>
+        </div>
+    </dt>
+    <dt class="col-4">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Obsługujesz</h5>
+                @foreach (var item in Model)
+                {
+                    <p>@Html.DisplayFor(modelItem => item.UserName)</p>
+                }
+            </div>
+        </div>
+    </dt>
+    </dl>
+</div>

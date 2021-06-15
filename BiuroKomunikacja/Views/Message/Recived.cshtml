@@ -1,0 +1,47 @@
+@model IEnumerable<BiuroKomunikacja.Models.MessageModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Wiadomości Odebrane</h1>
+
+<p>
+    <a asp-action="Create">Nowa Wiadomość</a> | 
+    <a asp-action="Recived">Odebrane</a> | 
+    <a asp-action="Sent">Wysłane</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Wiadomość
+            </th>
+            <th>
+                Nadawca
+            </th>
+            <th>
+                Data
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Message)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sender.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MessageDate)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id">Wyświetl</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Usuń</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

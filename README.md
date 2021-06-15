@@ -1,5 +1,7 @@
 # Projekt
 Temat: System komunikacji biura rachunkowego
+Użyta technologia: C# .Net Core 5 z Entity Framework Core.
+Uwagi: Prototypowy front-end. 
 ## User Login
 ### Admin
 Username: admin@test.com

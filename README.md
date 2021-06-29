@@ -16,6 +16,9 @@ Password: !Test123
 ### Employee
 Username: employee@test.com\
 Password: !Test123
-### User
+### Users
 Username: test@test.com\
+Password: !Test123\
+
+Username: test2@test.com\
 Password: !Test123
